@@ -15,7 +15,7 @@ import sqlalchemy
 from sqlalchemy.exc import IntegrityError
 
 # Database connection setup
-db_connection_string = "mysql+pymysql://yyrpriuzbphwzpck4u2o:pscale_pw_o2O7ZlS5CHJOlhQoBDBT1AZVsggoWSVm0dV3vB1YBJ@aws.connect.psdb.cloud/tiu_course_catalogue?charset=utf8mb4"
+db_connection_string = os.environ['DB_CONNECTION_STRING']
 engine = create_engine(
     db_connection_string,
     connect_args={
